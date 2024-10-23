@@ -6,7 +6,7 @@
     <title>Jogo de Capturar Objetos Caindo</title>
     <style>
         canvas {
-            background-color: rgb(170, 0, 255);
+            background-color: rgb(255, 0, 115);
             display: block;
             margin: 0 auto;
         }
@@ -125,41 +125,9 @@ document.addEventListener('keyup', function(event) {
 
 // Inicia o jogo
 desenhar();
-// Variáveis para dificuldade progressiva
-let maxObjetos = 1;
-let objetoVelocidadeMaxima = 5;
 
-// Função para criar um novo objeto
-function criaObjeto() {
-    // ... (código para criar um objeto com tamanho aleatório)
-    objetos.push({ x: objetoX, y: objetoY, largura: objetoLargura, altura: objetoAltura, velocidade: velocidadeObjeto });
-}
+</script>;
 
-// Função para atualizar todos os objetos
-function atualizarObjetos() {
-    objetos.forEach(objeto => {
-        // ... (código para atualizar a posição e verificar colisões)
-        if (objeto.y > canvas.height) {
-            objetos.splice(objetos.indexOf(objeto), 1); // Remove o objeto
-            criaObjeto(); // Cria um novo objeto
-        }
-    });
-}
+</body>;
 
-// Aumenta a dificuldade gradualmente
-function aumentarDificuldade() {
-    if (pontuacao % 10 === 0) {
-        maxObjetos++;
-        objetoVelocidadeMaxima += 0.5;
-    }
-}
-
-// Função principal do jogo
- desenhar();
-
-
-    // Atualiza a dificuldade
-    aumentarDificuldade();
-
-    // Atualiza os objetos
-    atualizarObjetos();
+</html>;

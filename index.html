@@ -125,9 +125,41 @@ document.addEventListener('keyup', function(event) {
 
 // Inicia o jogo
 desenhar();
+// Variáveis para dificuldade progressiva
+let maxObjetos = 1;
+let objetoVelocidadeMaxima = 5;
 
-</script>;
+// Função para criar um novo objeto
+function criaObjeto() {
+    // ... (código para criar um objeto com tamanho aleatório)
+    objetos.push({ x: objetoX, y: objetoY, largura: objetoLargura, altura: objetoAltura, velocidade: velocidadeObjeto });
+}
 
-</body>;
+// Função para atualizar todos os objetos
+function atualizarObjetos() {
+    objetos.forEach(objeto => {
+        // ... (código para atualizar a posição e verificar colisões)
+        if (objeto.y > canvas.height) {
+            objetos.splice(objetos.indexOf(objeto), 1); // Remove o objeto
+            criaObjeto(); // Cria um novo objeto
+        }
+    });
+}
 
-</html>;
+// Aumenta a dificuldade gradualmente
+function aumentarDificuldade() {
+    if (pontuacao % 10 === 0) {
+        maxObjetos++;
+        objetoVelocidadeMaxima += 0.5;
+    }
+}
+
+// Função principal do jogo
+function desenhar() {
+    // ... (código existente)
+
+    // Atualiza a dificuldade
+    aumentarDificuldade();
+
+    // Atualiza os objetos
+    atualizarObjetos();

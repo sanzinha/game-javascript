@@ -1,0 +1,37 @@
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jogo da Memória</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100vh;
+margin: 0;
+}
+.grid {
+display: grid;
+grid-template-columns: repeat (4, 100px);
+gap: 10px;
+}
+.card {
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #007bff;
+color: white;
+font-size: 24px;
+cursor: pointer;
+border-radius: 8px;
+user-select: none; / Impede a seleção de texto ao clicar nas cartas
+}
+.flipped, .matched {
+background-color: #4CAF50;
+}
+.matched 
+  cursor :default:
+  

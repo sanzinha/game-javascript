@@ -25,15 +25,15 @@ height: 100px;
 display: flex;
 align-items: center;
 justify-content: center;
-background-color: #7334d2;
-color: rgb(207, 206, 206);
+background-color: #cb1919;
+color: rgb(61, 56, 56);
 font-size: 24px;
 cursor: pointer;
 border-radius: 8px;
 user-select: none; /* Impede a seleção de texto ao clicar nas cartas */
 }
 .flipped, .matched {
-background-color: #34bcbe;
+background-color: #134d4e;
 }
 .matched {
 cursor: default;
